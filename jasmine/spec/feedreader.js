@@ -13,7 +13,7 @@ $(function() {
      * the allFeeds variable in our application.
      */
     describe('RSS Feeds', function() {
-        /* It tests to make sure that the allFeeds variable has
+        /* To test that the allFeeds variable has
          * been defined and that it is not empty.
          */
         it('are defined', function() {
@@ -21,7 +21,7 @@ $(function() {
             expect(allFeeds.length).not.toBe(0);
         });
 
-        /* It ensures all feeds have a URL defined
+        /* To ensure all feeds have a URL defined
          * and that the URL is not empty.
          */
         it('have URLs', function() {
@@ -31,10 +31,15 @@ $(function() {
             }
         });
 
-        /* TODO: Write a test that loops through each feed
-         * in the allFeeds object and ensures it have a name defined
+        /* To ensure all feeds have a name defined
          * and that the name is not empty.
          */
+        it('have names', function() {
+            for(let feed of allFeeds) {
+                expect(feed.name).toBeDefined();
+                expect(feed.name.length).not.toBe(0);
+            }
+        });
     });
 
 
