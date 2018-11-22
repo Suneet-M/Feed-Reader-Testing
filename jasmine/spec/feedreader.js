@@ -67,15 +67,24 @@ $(function() {
             expect(body.classList.contains('menu-hidden')).toBe(true);
         });
     });
-    /* TODO: Write a new test suite named "Initial Entries" */
 
-        /* TODO: Write a test that ensures when the loadFeed
-         * function is called and completes its work, there is at least
-         * a single .entry element within the .feed container.
-         * Remember, loadFeed() is asynchronous so this test will require
-         * the use of Jasmine's beforeEach and asynchronous done() function.
+    /* A test suite for Initial Entries */
+    describe('Initial Entries', function () {
+        /* To ensure when the loadFeed function is called, and
+         * completes its work, there is at least a single .entry
+         * element within the .feed container.
          */
+        beforeEach(function (done) {
+            // callback passed to wait for this function before continuing to spec.
+            loadFeed(0, () => done());
+        });
 
+        it('are loaded successfully', function (done) {
+            // fetching an array of all entries and checking its length.
+            expect(document.querySelector('.entry').length).not.toBe(0);
+            done();
+        });
+    });
     /* TODO: Write a new test suite named "New Feed Selection" */
 
         /* TODO: Write a test that ensures when a new feed is loaded
