@@ -1,7 +1,7 @@
 # Project Overview
 In this project I was given a web-based application that reads RSS feeds provided to it. It fetches 10 feeds from the RSS channels and appends it to the feed area one by one. The feed channel list is found in the side menu. Clicking any channel will fetch feeds from their website and display in the feed container. To change or add channels available to us, a new object has to be added in the allFeeds array which would contain URL and name for the new channel.
 
-The application can be used by launching the [index.html](./index.html) file from the project's root directory, after ensuring a internet connection ofcourse.
+The application can be used by clicking [here](https://suneet-m.github.io/Feed-Reader-Testing/).
 
 ## Dependencies
 The application uses
